@@ -1,0 +1,20 @@
+<!--
+  Generated template for the TestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>test</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+    <ul *ngIf="accounts | async as k">
+        <li *ngFor="let account of k">{{account.login | translate}} 
+            <img src={{account.avatar_url}} alt="">
+        </li>
+      </ul>
+</ion-content>
